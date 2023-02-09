@@ -1,6 +1,5 @@
 section {
   width: 1920px;
-  height: 1080px;
 }
 
 .back-icon {
@@ -22,20 +21,23 @@ section {
 .input-container {
   width: 1098px;
   height: 1080px;
-  justify-content: space-between;
   background-color: #f9f9f9;
 }
 
 .input-wrapper {
   width: 800px;
-  height: 750px;
+  height: 100%;
   margin: 0 auto;
+}
+
+.experience-div {
+  justify-content: space-between;
+  height: 600px;
 }
 
 header {
   width: 100%;
   padding: 20px 0 10px 0;
-  margin-bottom: 77px;
   border-bottom: 1px solid #1a1a1a;
 }
 
@@ -50,14 +52,23 @@ label {
   margin-bottom: 8px;
 }
 
-#Name,
-#Surname {
-  width: 355px;
-  height: 48px;
-  padding-left: 16px;
+#position,
+#employer {
+  padding: 13px 16px 14px 16px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
   background-image: url(../images/Checked-icon.png);
   background-position: 98%;
   background-repeat: no-repeat;
+}
+
+#startDate,
+#endDate {
+  width: 355px;
+  height: 48px;
+  padding-left: 16px;
   border: 1px solid #bcbcbc;
   border-radius: 4px;
   font-size: 16px;
@@ -69,26 +80,7 @@ label {
   color: #2e2e2e;
 }
 
-.uploadimg-div {
-  width: 358px;
-  margin: 34px 0;
-}
-
-.uploadimg-div button {
-  width: 107px;
-  height: 27px;
-  background-color: #0e80bf;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-}
-
-.uploadimg-div button:hover {
-  cursor: pointer;
-  background-color: #46b6f3;
-}
-
-#aboutMe {
+#jobDescription {
   padding: 13px 16px 69px 16px;
   font-size: 16px;
   border: 1px solid #bcbcbc;
@@ -99,22 +91,47 @@ label {
   background-repeat: no-repeat;
 }
 
-#email,
-#phoneNumber {
-  padding: 13px 16px 14px 16px;
-  margin-bottom: 8px;
-  font-size: 16px;
-  border: 1px solid #bcbcbc;
+.divider {
+  width: 800px;
+  height: 1px;
+  margin: 45px 0;
+  background-color: #c1c1c1;
+}
+
+#addExperienceBtn {
+  width: 299px;
+  height: 48px;
+  border: none;
   border-radius: 4px;
-  background-image: url(../images/Checked-icon.png);
-  background-position: 98%;
-  background-repeat: no-repeat;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #62a1eb;
+  color: #ffffff;
+}
+
+#addExperienceBtn:hover {
+  cursor: pointer;
+  background-color: #89c0ff;
+}
+
+.prev-next-container {
+  width: 800px;
+  margin-bottom: 79px;
+}
+
+#prevBtn {
+  width: 131px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background-color: #6b40e3;
 }
 
 #nextBtn {
-  position: relative;
-  top: 160px;
-  left: 647px;
   width: 151px;
   height: 48px;
   font-size: 16px;
@@ -126,7 +143,8 @@ label {
   background-color: #6b40e3;
 }
 
-#nextBtn:hover {
+#nextBtn:hover,
+#prevBtn:hover {
   background-color: #7949ff;
   cursor: pointer;
 }
@@ -172,4 +190,30 @@ label {
   font-weight: 700;
   margin-bottom: 15px;
   color: #f93b1d;
+}
+
+.experience-result h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #f93b1d;
+}
+
+.job-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.work-dates {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #909090;
+}
+
+.job-description {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 30px;
 }
