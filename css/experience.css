@@ -37,7 +37,7 @@ section {
 
 header {
   width: 100%;
-  padding: 20px 0 10px 0;
+  padding: 45px 0 10px 0;
   border-bottom: 1px solid #1a1a1a;
 }
 
@@ -156,7 +156,7 @@ label {
 .user-wrapper {
   width: 90%;
   margin: 48px auto 0 auto;
-  padding-bottom: 47px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #c8c8c8;
 }
 

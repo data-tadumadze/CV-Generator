@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/shared.css">
-    <link rel="stylesheet" href="../css/experience.css">
+    <link rel="stylesheet" href="../css/education.css">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2807/2807415.png">
     <title>CV Generator</title>
 </head>
@@ -22,25 +22,31 @@
         <div class="input-container flex-column">
             <div class="input-wrapper flex-column space-between">
                 <header class="flex-row align-center space-between">
-                    <h2>გამოცდილება</h2>
-                    <span>2/3</span>
+                    <h2>განათლება</h2>
+                    <span>3/3</span>
                 </header>
                 <div class="flex-column">
-                    <div class="experience-div flex-column">
+                    <div class="education-div flex-column">
                         <div class="flex-column space-between">
-                            <label for="position">თანამდებობა</label>
-                            <input type="text" name="Position" id="position" placeholder="დეველოპერი, დიზაინერი, ა.შ.">
-                            <p class="warning-message">მინიმუმ 2 სიმბოლო</p>
-                        </div>
-                        <div class="flex-column space-between">
-                            <label for="employer">დამსაქმებელი</label>
-                            <input type="text" name="Employer" id="employer" placeholder="დამსაქმებელი">
+                            <label for="schoolName">სასწავლებელი</label>
+                            <input type="text" name="SchoolName" id="schoolName" placeholder="სასწავლებელი">
                             <p class="warning-message">მინიმუმ 2 სიმბოლო</p>
                         </div>
                         <div class="flex-row align-center space-between">
                             <div class="flex-column">
-                                <label for="startDate">დაწყების რიცხვი</label>
-                                <input type="date" name="StartDate" id="startDate" placeholder="ანზორ">
+                                <label for="schoolDegree">ხარისხი</label>
+                                <select name="SchoolDegree" id="schoolDegree">
+                                    <option selected disabled>აირჩიეთ ხარისხი</option>
+                                    <option value="middleSchool">საშუალო სკოლის დიპლომი</option>
+                                    <option value="generalEducation">ზოგადსაგანმანათლებლო დიპლომი</option>
+                                    <option value="bachelor">ბაკალავრი</option>
+                                    <option value="master">მაგისტრი</option>
+                                    <option value="doctor">დოქტორი</option>
+                                    <option value="degree">ასოცირებული ხარისხი</option>
+                                    <option value="student">სტუდენტი</option>
+                                    <option value="college">კოლეჯი (ხარისხის გარეშე)</option>
+                                    <option value="other">სხვა</option>
+                                </select>
                             </div>
                             <div class="flex-column">
                                 <label for="endDate">დამთავრების რიცხვი</label>
@@ -50,19 +56,19 @@
                         <div class="flex-column space-between">
                             <label for="jobDescription">აღწერა</label>
                             <textarea name="JobDescription" id="jobDescription"
-                                placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                                placeholder="განათლების აღწერა"></textarea>
                         </div>
                         <div class="divider">
                         </div>
                     </div>
-                    <button id="addExperienceBtn">მეტი გამოცდილების დამატება</button>
+                    <button id="addExperienceBtn">მეტი სასწავლებლის დამატება</button>
                 </div>
                 <div class="prev-next-container flex-row space-between">
-                    <a href="../html/user.html">
+                    <a href="../html/experience.html">
                         <button id="prevBtn">უკან</button>
                     </a>
-                    <a href="../html/education.html">
-                        <button id="nextBtn">შემდეგი</button>
+                    <a href="../html/final.html">
+                        <button id="nextBtn">დასრულება</button>
                     </a>
                 </div>
             </div>
@@ -88,7 +94,7 @@
                 <img class="profile-picture" src="../images/home-background.png" alt="">
 
             </div>
-            <div class="user-wrapper flex-row">
+            <div class="user-wrapper">
                 <div class="experience-result flex-column">
                     <h4>გამოცდილება</h4>
                     <p class="job-title">React Native Developer, <span class="employer">Microsoft</span> </p>
@@ -97,6 +103,20 @@
                         <span class="end-date">2022-11-07</span>
                     </p>
                     <p class="job-description">Experienced Javascript Native Developer with 5 years in the industry.
+                        proficient withreact. Used problem-solving aptitude to encahge application performance by
+                        14%.created data visualisation tools and integrated designs. </p>
+                </div>
+            </div>
+            <div class="user-wrapper">
+                <div class="experience-result flex-column">
+                    <h4>განათლება</h4>
+                    <p class="school-title">წმ. ანდრიას საპატრიარქოს სასწავლებელი,
+                        <span class="status">სტუდენტი</span>
+                    </p>
+                    <p class="study-dates">
+                        <span class="end-date">2022-11-07</span>
+                    </p>
+                    <p class="study-description">Experienced Javascript Native Developer with 5 years in the industry.
                         proficient withreact. Used problem-solving aptitude to encahge application performance by
                         14%.created data visualisation tools and integrated designs. </p>
                 </div>
