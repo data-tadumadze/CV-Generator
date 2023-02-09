@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url(../fonts/HelveticaNeue.ttc);
+}
+
+body {
+  font-family: "Helvetica";
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.none {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.error-icon {
+  margin-right: 13.5px;
+}

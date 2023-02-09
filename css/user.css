@@ -1,0 +1,174 @@
+section {
+  width: 1920px;
+  height: 1080px;
+}
+
+.back-icon {
+  position: absolute;
+  top: 57px;
+  left: 62px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.back-icon:hover {
+  background-color: #e6e4e4;
+  cursor: pointer;
+}
+
+.input-container {
+  width: 1098px;
+  height: 1080px;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+}
+
+.input-wrapper {
+  width: 800px;
+  height: 750px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#Name,
+#Surname {
+  width: 355px;
+  height: 48px;
+  padding-left: 16px;
+  background-image: url(../images/Checked-icon.png);
+  background-position: 98%;
+  background-repeat: no-repeat;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.warning-message {
+  font-size: 14px;
+  color: #2e2e2e;
+}
+
+.uploadimg-div {
+  width: 358px;
+  margin: 34px 0;
+}
+
+.uploadimg-div button {
+  width: 107px;
+  height: 27px;
+  background-color: #0e80bf;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+}
+
+.uploadimg-div button:hover {
+  cursor: pointer;
+  background-color: #46b6f3;
+}
+
+#aboutMe {
+  padding: 13px 16px 69px 16px;
+  font-size: 16px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  resize: none;
+  background-image: url(../images/Checked-icon.png);
+  background-position: 98%;
+  background-repeat: no-repeat;
+}
+
+#email,
+#phoneNumber {
+  padding: 13px 16px 14px 16px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  background-image: url(../images/Checked-icon.png);
+  background-position: 98%;
+  background-repeat: no-repeat;
+}
+
+#nextBtn {
+  position: relative;
+  top: 160px;
+  left: 647px;
+  width: 151px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background-color: #6b40e3;
+}
+
+#nextBtn:hover {
+  background-color: #7949ff;
+  cursor: pointer;
+}
+
+.result-container {
+  width: 822px;
+}
+
+.user-wrapper {
+  width: 90%;
+  margin: 48px auto 0 auto;
+  padding-bottom: 47px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.profile-picture {
+  width: 246px;
+  height: 246px;
+  border-radius: 50%;
+}
+
+.user-result h3 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 17px;
+  color: #f93b1d;
+}
+
+.user-result div:nth-child(2) {
+  margin-bottom: 10px;
+}
+.user-result div:nth-child(3) {
+  margin-bottom: 34px;
+}
+
+.user-result div:nth-child(2) img,
+.user-result div:nth-child(3) img {
+  margin-right: 11px;
+}
+
+.user-result span {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #f93b1d;
+}

@@ -1,0 +1,49 @@
+section {
+  width: 1920px;
+  height: 1080px;
+  background-image: url(../images/home-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 1040px;
+}
+
+.home-container img {
+  position: absolute;
+  top: 473px;
+  left: 1076px;
+  z-index: 0;
+}
+
+button {
+  position: absolute;
+  width: 464px;
+  height: 60px;
+  top: 513px;
+  left: 728px;
+  z-index: 1;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #393939;
+  cursor: pointer;
+}
