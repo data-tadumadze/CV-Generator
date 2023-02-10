@@ -27,61 +27,73 @@
                 </header>
                 <div class="flex-row align-center space-between">
                     <div class="flex-column">
-                        <label for="Name">სახელი</label>
-                        <input type="text" name="Name" id="Name" placeholder="ანზორ">
+                        <label id="firstnameLabel" for="firstname">სახელი</label>
+                        <input oninp
+                            oninput="validateMin2Symbols(firstnameLabel, firstname), showResult(firstname, firstnameResult)"
+                            type="text" name="Name" id="firstname" placeholder="ანზორ">
                         <p class="warning-message">მინიმუმ 2 ასო, ქართული ასოები</p>
                     </div>
                     <div class="flex-column">
-                        <label for="Surname">გვარი</label>
-                        <input type="text" name="Surame" id="Surname" placeholder="მუმლაძე">
+                        <label id="surnameLabel" for="surname">გვარი</label>
+                        <input oninput="validateMin2Symbols(surnameLabel, surname), showResult(surname, lastnameResult)"
+                            type="text" name="Surame" id="surname" placeholder="მუმლაძე">
                         <p class="warning-message">მინიმუმ 2 ასო, ქართული ასოები</p>
                     </div>
                 </div>
                 <div class="uploadimg-div flex-row align-center space-between">
-                    <label for="uploadImg">პირადი ფოტოს ატვირთვა</label>
-                    <button id="uploadImg">ატვირთვა</button>
+                    <label id="imageInputLabel" class="uploadimg-div flex-row align-center space-between"
+                        for="imageInput">პირადი ფოტოს
+                        ატვირთვა <input class="none" type="file" name="ProfilePicture" id="imageInput"
+                            accept="image/png, image/jgp">
+                        <div class="upload-btn flex-column">ატვირთვა</div>
+                    </label>
                 </div>
                 <div class="flex-column space-between">
                     <label for="aboutMe">ჩემ შესახებ(არასავალდებულო)</label>
-                    <textarea name="AboutMe" id="aboutMe" placeholder="ზოგადი ინფო შენ შესახებ"></textarea>
+                    <textarea oninput="showResult(aboutMe, aboutMeResult), hideHeader(aboutMe)" name="AboutMe"
+                        id="aboutMe" placeholder="ზოგადი ინფო შენ შესახებ"></textarea>
                 </div>
                 <div class="flex-column space-between">
-                    <label for="email">ელ.ფოსტა</label>
-                    <input type="email" name="Email" id="email" placeholder="anzorr666@redberry.ge">
+                    <label id="emailLabel" for="email">ელ.ფოსტა</label>
+                    <input oninput="validateEmail(), showResult(email, emailResult)" type="email" name="Email"
+                        id="email" placeholder="anzorr666@redberry.ge">
                     <p class="warning-message">უნდა მთავრდებოდეს @redberry.ge-ით</p>
                 </div>
                 <div class="flex-column space-between">
-                    <label for="phoneNumber">ელ.ფოსტა</label>
-                    <input type="number" name="PhoneNumber" id="phoneNumber" placeholder="+995 551 12 34 56">
+                    <label id="phoneNumberLabel" for="phoneNumber">მობილურის ნომერი</label>
+                    <input oninput="validatePhoneNumber(), showResult(phoneNumber, phoneNumberResult)" type="text"
+                        name="PhoneNumber" id="phoneNumber" placeholder="+995 551 12 34 56">
                     <p class="warning-message">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
                 </div>
-                <a href="../html/experience.html">
-                    <button id="nextBtn">შემდეგი</button>
-                </a>
+                <button onclick="window.location.href='../html/experience.html'" id="nextBtn1">შემდეგი</button>
             </div>
         </div>
         <div class="result-container">
             <div class="user-wrapper flex-row">
                 <div class="user-result flex-column">
-                    <h3>ანზორ მუმლაძე</h3>
+                    <div class="flex-row">
+                        <h3 id="firstnameResult">სახელი</h3>
+                        <h3 id="lastnameResult">გვარი</h3>
+                    </div>
                     <div class="flex-row">
                         <img src="../images/@-icon.png" alt="@ Icon">
-                        <p>anzor666@gmail.com</p>
+                        <p id="emailResult">ელ-ფოსტა</p>
                     </div>
                     <div class="flex-row">
                         <img src="../images/phone-icon.png" alt="Phone Icon">
-                        <p>+995 597 63 45 16</p>
+                        <p id="phoneNumberResult">მობილურის ნომერი</p>
                     </div>
                     <div class="flex-column">
-                        <span>ჩემ შესახებ</span>
-                        <p>ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ
-                            ავდგები გამამხნევებელი ვარჯიშების მაგიერ დიზაინს ვაკეთებ. </p>
+                        <span class="none" id="aboutMeHeader">ჩემ შესახებ</span>
+                        <p id="aboutMeResult"></p>
                     </div>
                 </div>
-                <img class="profile-picture" src="../images/home-background.png" alt="">
+                <div id="profilePicture">
+                </div>
             </div>
         </div>
     </section>
+    <script src="../script/index.js"></script>
 </body>
 
 </html>

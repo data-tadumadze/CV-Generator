@@ -59,7 +59,7 @@ label {
   font-size: 16px;
   border: 1px solid #bcbcbc;
   border-radius: 4px;
-  background-image: url(../images/Checked-icon.png);
+  /* background-image: url(../images/Checked-icon.png); */
   background-position: 98%;
   background-repeat: no-repeat;
 }
@@ -86,7 +86,7 @@ label {
   border: 1px solid #bcbcbc;
   border-radius: 4px;
   resize: none;
-  background-image: url(../images/Checked-icon.png);
+  /* background-image: url(../images/Checked-icon.png); */
   background-position: 98%;
   background-repeat: no-repeat;
 }
@@ -170,6 +170,7 @@ label {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 17px;
+  margin-right: 10px;
   color: #f93b1d;
 }
 

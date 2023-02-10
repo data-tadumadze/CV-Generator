@@ -28,7 +28,7 @@ section {
 
 .input-wrapper {
   width: 800px;
-  height: 750px;
+  height: 870px;
   margin: 0 auto;
 }
 
@@ -50,12 +50,12 @@ label {
   margin-bottom: 8px;
 }
 
-#Name,
-#Surname {
+#firstname,
+#surname {
   width: 355px;
   height: 48px;
   padding-left: 16px;
-  background-image: url(../images/Checked-icon.png);
+  /* background-image: url(../images/Checked-icon.png); */
   background-position: 98%;
   background-repeat: no-repeat;
   border: 1px solid #bcbcbc;
@@ -71,21 +71,27 @@ label {
 
 .uploadimg-div {
   width: 358px;
-  margin: 34px 0;
+  margin: 14px 0;
 }
 
-.uploadimg-div button {
+.upload-btn {
   width: 107px;
   height: 27px;
+  text-align: center;
+  justify-content: center;
   background-color: #0e80bf;
   color: #ffffff;
+  font-size: 12px;
+  font-weight: 200;
   border: none;
   border-radius: 4px;
 }
 
-.uploadimg-div button:hover {
+.uploadimg-div:hover > .upload-btn {
+  background-color: #50c2ff;
+}
+.uploadimg-div:hover {
   cursor: pointer;
-  background-color: #46b6f3;
 }
 
 #aboutMe {
@@ -94,7 +100,6 @@ label {
   border: 1px solid #bcbcbc;
   border-radius: 4px;
   resize: none;
-  background-image: url(../images/Checked-icon.png);
   background-position: 98%;
   background-repeat: no-repeat;
 }
@@ -106,12 +111,11 @@ label {
   font-size: 16px;
   border: 1px solid #bcbcbc;
   border-radius: 4px;
-  background-image: url(../images/Checked-icon.png);
   background-position: 98%;
   background-repeat: no-repeat;
 }
 
-#nextBtn {
+#nextBtn1 {
   position: relative;
   top: 160px;
   left: 647px;
@@ -126,7 +130,7 @@ label {
   background-color: #6b40e3;
 }
 
-#nextBtn:hover {
+#nextBtn1:hover {
   background-color: #7949ff;
   cursor: pointer;
 }
@@ -142,16 +146,23 @@ label {
   border-bottom: 1px solid #c8c8c8;
 }
 
-.profile-picture {
+#profilePicture {
   width: 246px;
   height: 246px;
   border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.user-result {
+  width: 450px;
 }
 
 .user-result h3 {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 17px;
+  margin-right: 10px;
   color: #f93b1d;
 }
 
@@ -172,4 +183,8 @@ label {
   font-weight: 700;
   margin-bottom: 15px;
   color: #f93b1d;
+}
+
+.user-result p {
+  word-wrap: break-word;
 }
