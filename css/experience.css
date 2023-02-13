@@ -160,6 +160,10 @@ label {
   border-bottom: 1px solid #c8c8c8;
 }
 
+.user-result {
+  width: 450px;
+}
+
 .profile-picture {
   width: 246px;
   height: 246px;

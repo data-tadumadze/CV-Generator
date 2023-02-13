@@ -12,7 +12,7 @@
     <title>CV Generator</title>
 </head>
 
-<body>
+<body onload="getUserResult(), getUserResult2()">
     <section class="flex-row">
         <a href="../html/home.html">
             <div class="back-icon flex-row align-center">
@@ -28,35 +28,40 @@
                 <div class="flex-column">
                     <div class="education-div flex-column">
                         <div class="flex-column space-between">
-                            <label for="schoolName">სასწავლებელი</label>
-                            <input type="text" name="SchoolName" id="schoolName" placeholder="სასწავლებელი">
+                            <label id="schoolNameLabel" for="schoolName">სასწავლებელი</label>
+                            <input
+                                oninput="showResult(schoolName, schoolNameResult), validateMin2Symbols(schoolNameLabel, schoolName)"
+                                type="text" name="SchoolName" id="schoolName" placeholder="სასწავლებელი">
                             <p class="warning-message">მინიმუმ 2 სიმბოლო</p>
                         </div>
                         <div class="flex-row align-center space-between">
                             <div class="flex-column">
                                 <label for="schoolDegree">ხარისხი</label>
-                                <select name="SchoolDegree" id="schoolDegree">
+                                <select oninput="showResult(schoolDegree, schoolDegreeResult)" name="SchoolDegree"
+                                    id="schoolDegree">
                                     <option selected disabled>აირჩიეთ ხარისხი</option>
-                                    <option value="middleSchool">საშუალო სკოლის დიპლომი</option>
-                                    <option value="generalEducation">ზოგადსაგანმანათლებლო დიპლომი</option>
-                                    <option value="bachelor">ბაკალავრი</option>
-                                    <option value="master">მაგისტრი</option>
-                                    <option value="doctor">დოქტორი</option>
-                                    <option value="degree">ასოცირებული ხარისხი</option>
-                                    <option value="student">სტუდენტი</option>
-                                    <option value="college">კოლეჯი (ხარისხის გარეშე)</option>
-                                    <option value="other">სხვა</option>
+                                    <option value="საშუალო სკოლის დიპლომი">საშუალო სკოლის დიპლომი</option>
+                                    <option value="ზოგადსაგანმანათლებლო დიპლომი">ზოგადსაგანმანათლებლო დიპლომი</option>
+                                    <option value="ბაკალავრი">ბაკალავრი</option>
+                                    <option value="მაგისტრი">მაგისტრი</option>
+                                    <option value="დოქტორი">დოქტორი</option>
+                                    <option value="ასოცირებული ხარისხი">ასოცირებული ხარისხი</option>
+                                    <option value="სტუდენტი">სტუდენტი</option>
+                                    <option value="კოლეჯი (ხარისხის გარეშე)">კოლეჯი (ხარისხის გარეშე)</option>
+                                    <option value="სხვა">სხვა</option>
                                 </select>
                             </div>
                             <div class="flex-column">
                                 <label for="endDate">დამთავრების რიცხვი</label>
-                                <input type="date" name="EndDate" id="endDate" placeholder="ანზორ">
+                                <input oninput="showResult(studyEndDate, studyEndDateResult)" type="date" name="EndDate"
+                                    id="studyEndDate" placeholder="ანზორ">
                             </div>
                         </div>
                         <div class="flex-column space-between">
-                            <label for="jobDescription">აღწერა</label>
-                            <textarea name="JobDescription" id="jobDescription"
-                                placeholder="განათლების აღწერა"></textarea>
+                            <label id="studyDescriptionLabel" for="studyDescription">აღწერა</label>
+                            <textarea
+                                oninput="showResult(studyDescription, studyDescriptionResult), fillThis(studyDescriptionLabel, studyDescription)"
+                                name="JobDescription" id="studyDescription" placeholder="განათლების აღწერა"></textarea>
                         </div>
                         <div class="divider">
                         </div>
@@ -68,7 +73,7 @@
                         <button id="prevBtn">უკან</button>
                     </a>
                     <a href="../html/final.html">
-                        <button id="nextBtn">დასრულება</button>
+                        <button onclick="addEducation()" id="nextBtn">დასრულება</button>
                     </a>
                 </div>
             </div>
@@ -76,53 +81,51 @@
         <div class="result-container flex-column">
             <div class="user-wrapper flex-row">
                 <div class="user-result flex-column">
-                    <h3>ანზორ მუმლაძე</h3>
+                    <h3 id="firstnameResult"></h3>
+                    <h3 id="lastnameResult"></h3>
                     <div class="flex-row">
                         <img src="../images/@-icon.png" alt="@ Icon">
-                        <p>anzor666@gmail.com</p>
+                        <p id="emailResult"></p>
                     </div>
                     <div class="flex-row">
                         <img src="../images/phone-icon.png" alt="Phone Icon">
-                        <p>+995 597 63 45 16</p>
+                        <p id="phoneNumberResult"></p>
                     </div>
                     <div class="flex-column">
                         <span>ჩემ შესახებ</span>
-                        <p>ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ
-                            ავდგები გამამხნევებელი ვარჯიშების მაგიერ დიზაინს ვაკეთებ. </p>
+                        <p id="aboutMeResult"></p>
                     </div>
                 </div>
-                <img class="profile-picture" src="../images/home-background.png" alt="">
+                <img class="profile-picture" src="../images/robot.jpg" alt="">
 
             </div>
             <div class="user-wrapper">
                 <div class="experience-result flex-column">
                     <h4>გამოცდილება</h4>
-                    <p class="job-title">React Native Developer, <span class="employer">Microsoft</span> </p>
+                    <p><span id="positionResult" class="job-title"></span> <span id="employerResult"
+                            class="employer"></span> </p>
                     <p class="work-dates">
-                        <span class="start-date">2020-09-23 -</span>
-                        <span class="end-date">2022-11-07</span>
+                        <span id="startDateResult" class="start-date"></span>
+                        <span id="endDateResult" class="end-date"></span>
                     </p>
-                    <p class="job-description">Experienced Javascript Native Developer with 5 years in the industry.
-                        proficient withreact. Used problem-solving aptitude to encahge application performance by
-                        14%.created data visualisation tools and integrated designs. </p>
+                    <p id="jobDescriptionResult" class="job-description"></p>
                 </div>
             </div>
             <div class="user-wrapper">
                 <div class="experience-result flex-column">
                     <h4>განათლება</h4>
-                    <p class="school-title">წმ. ანდრიას საპატრიარქოს სასწავლებელი,
-                        <span class="status">სტუდენტი</span>
+                    <p id="schoolNameResult" class="school-title">
+                        <span id="schoolDegreeResult" class="status"></span>
                     </p>
                     <p class="study-dates">
-                        <span class="end-date">2022-11-07</span>
+                        <span id="studyEndDateResult" class="end-date"></span>
                     </p>
-                    <p class="study-description">Experienced Javascript Native Developer with 5 years in the industry.
-                        proficient withreact. Used problem-solving aptitude to encahge application performance by
-                        14%.created data visualisation tools and integrated designs. </p>
+                    <p id="studyDescriptionResult" class="study-description">
+                    </p>
                 </div>
             </div>
     </section>
-    <script src="../script/index.js"></script>
+    <script src="../script/education.js"></script>
 </body>
 
 </html>

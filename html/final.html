@@ -12,7 +12,7 @@
     <title>CV Generator</title>
 </head>
 
-<body>
+<body onload="getUserResult(),getUserResult2(),getUserResult3()">
     <a href="../html/home.html">
         <div class="back-icon flex-row align-center">
             <img src="../images/Back-icon.png" alt="Back Icon">
@@ -21,57 +21,59 @@
     <div class="result-container flex-column">
         <div class="wrapper flex-row">
             <div class="user-result flex-column">
-                <h3>ანზორ მუმლაძე</h3>
+                <div class="flex-row">
+                    <h3 id="firstnameResult"></h3>
+                    <h3 id="lastnameResult"></h3>
+                </div>
                 <div class="flex-row">
                     <img src="../images/@-icon.png" alt="@ Icon">
-                    <p>anzor666@gmail.com</p>
+                    <p id="emailResult"></p>
                 </div>
                 <div class="flex-row">
                     <img src="../images/phone-icon.png" alt="Phone Icon">
-                    <p>+995 597 63 45 16</p>
+                    <p id="phoneNumberResult"></p>
                 </div>
                 <div class="flex-column">
                     <span>ჩემ შესახებ</span>
-                    <p>ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ
-                        ავდგები გამამხნევებელი ვარჯიშების მაგიერ დიზაინს ვაკეთებ. </p>
+                    <p id="aboutMeResult"></p>
                 </div>
             </div>
-            <img class="profile-picture" src="../images/home-background.png" alt="">
+            <img class="profile-picture" src="../images/robot.jpg" alt="">
 
         </div>
         <div class="wrapper">
             <div class="experience-result flex-column">
                 <h4>გამოცდილება</h4>
-                <p class="job-title">React Native Developer, <span class="employer">Microsoft</span> </p>
+                <p id="positionResult" class="job-title"> </p><span id="employerResult"
+                    class="employer">Microsoft</span>
                 <p class="work-dates">
-                    <span class="start-date">2020-09-23 -</span>
-                    <span class="end-date">2022-11-07</span>
+                    <span id="startDateResult" class="start-date"></span>
+                    <span id="endDateResult" class="end-date"></span>
                 </p>
-                <p class="job-description">Experienced Javascript Native Developer with 5 years in the industry.
-                    proficient withreact. Used problem-solving aptitude to encahge application performance by
-                    14%.created data visualisation tools and integrated designs. </p>
+                <p id="jobDescriptionResult" class="job-description"> </p>
             </div>
         </div>
         <div class="wrapper">
             <div class="experience-result flex-column">
                 <h4>განათლება</h4>
-                <p class="school-title">წმ. ანდრიას საპატრიარქოს სასწავლებელი,
-                    <span class="status">სტუდენტი</span>
-                </p>
+                <p id="schoolNameResult" class="school-title"></p>
+                <span id="schoolDegreeResult" class="status">სტუდენტი</span>
+
                 <p class="study-dates">
-                    <span class="end-date">2022-11-07</span>
+                    <span id="studyEndDateResult" class="end-date"></span>
                 </p>
-                <p class="study-description">Experienced Javascript Native Developer with 5 years in the industry.
+                <p id="studyDescriptionResult" class="study-description">Experienced Javascript Native Developer with 5
+                    years in the industry.
                     proficient withreact. Used problem-solving aptitude to encahge application performance by
                     14%.created data visualisation tools and integrated designs. </p>
             </div>
         </div>
     </div>
-    <div class="popup">
-        <span>x</span>
+    <div id="popup" class="popup">
+        <span onclick="closePopUP()">x</span>
         <p>რეზიუმე წარმატებით გაიგზავნა 🎉</p>
     </div>
-    <script src="../script/index.js"></script>
+    <script src="../script/final.js"></script>
 </body>
 
 </html>

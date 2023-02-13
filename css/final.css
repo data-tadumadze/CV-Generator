@@ -21,11 +21,17 @@
   border: 1px solid #000000;
 }
 
+
+
 .wrapper {
   width: 90%;
   margin: 48px auto 0 auto;
   padding-bottom: 10px;
   border-bottom: 1px solid #c8c8c8;
+}
+
+.user-result {
+  width: 450px;
 }
 
 .profile-picture {
@@ -39,6 +45,10 @@
   font-weight: 700;
   margin-bottom: 17px;
   color: #f93b1d;
+}
+
+#firstnameResult {
+  margin-right: 10px;
 }
 
 .user-result div:nth-child(2) {
@@ -80,7 +90,7 @@
   color: #909090;
 }
 
-.job-description {
+#jobDescriptionResult {
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 30px;
@@ -89,6 +99,11 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 7px;
+}
+
+#schoolDegreeResult,
+#employerResult {
+  margin-bottom: 10px;
 }
 
 .study-dates {
